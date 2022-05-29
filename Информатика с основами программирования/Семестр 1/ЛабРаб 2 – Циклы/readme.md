@@ -1,5 +1,6 @@
 ## Указания к выполнению
 Описанные ниже задания необходимо выполнить в Google.colab
+
 Ссылка на мой вариант выполнения заданий [тут](https://colab.research.google.com/drive/1Bavw77ObYkCrgFx6cB1fL0wheWQiZXAu?usp=sharing)
 
 ## Задание №1
