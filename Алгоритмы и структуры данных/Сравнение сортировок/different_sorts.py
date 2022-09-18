@@ -46,5 +46,15 @@ def sort_choices(lst):
         
 
 def sort_shaker(lst):
+    def sort_shaker(lst):
     '''Сортировка шейкером'''
-    pass
+    index = 0  # Нижняя граница списка
+    for i in range(len(lst), 1, -1):  # Цикл с уменьшением верхней границы
+        for j in range(index, i):  # "Всплытие" наибольшего
+            if lst[j] > lst[i-1]:
+                lst[i-1], lst[j] = lst[j], lst[i-1]
+        for k in range(i - 1, index, -1):  # "Утопление" наименьшего
+            if lst[k] < lst[index]:
+                lst[index], lst[k] = lst[k], lst[index]
+        index += 1  # Увеличение нижней границы
+    return lst
