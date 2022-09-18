@@ -31,7 +31,7 @@ def insert_sort(lst):
             i -= 1
         else:
             lst[i] = tmp
-    return(lst)
+    return lst
 
 
 def sort_choices(lst):
@@ -42,7 +42,7 @@ def sort_choices(lst):
             if lst[j] >= max: 
                 max, index = lst[j], j
         lst[i - 1], lst[index] = lst[index], lst[i - 1]
-    return(lst)
+    return lst
         
 
 def sort_shaker(lst):
