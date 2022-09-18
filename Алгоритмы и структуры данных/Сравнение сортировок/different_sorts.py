@@ -37,9 +37,11 @@ def insert_sort(lst):
 def sort_choices(lst):
     '''Сортировка выбором по возрастанию''' 
     for i in range(len(lst), 1, -1):
+        max = -10000
         for j in range(i):
-            if lst[j] >= lst[i-1]: 
-                lst[i-1], lst[j] = lst[j], lst[i-1]
+            if lst[j] >= max: 
+                max, index = lst[j], j
+        lst[i - 1], lst[index] = lst[index], lst[i - 1]
     return(lst)
         
 
