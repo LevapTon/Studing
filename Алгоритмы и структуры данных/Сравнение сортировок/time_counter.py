@@ -39,7 +39,14 @@ def timer(lst):
     lst = prog.sort_bubble_plus(lst)
     finish = monotonic()
     print(lst[:10])
-    print("Сортировка пузырьком+:", round(finish - start, 3), "\n") 
-
+    print("Сортировка пузырьком+:", round(finish - start, 3), "\n")
+    
+    random.shuffle(lst)
+    start = monotonic()
+    lst = prog.sort_shaker(lst)
+    finish = monotonic()
+    print(lst[:10])
+    print("Сортировка шейкером:", round(finish - start, 3), "\n") 
+    
 
 get_list()
