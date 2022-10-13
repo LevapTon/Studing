@@ -21,21 +21,27 @@ def merge_fix(a, b):
     '''
     исправленная функция
     '''
-    index_a = 0
-    index_b = 0
-    res = []
+    # в данной функции необходимо слить два отсортированных списка
+    # т.к. списки отсортированны по возрастанию
+    # то каждый последующий элемент списка гарантированно больше предыдущего
+    index_a = 0  # индекс элементов списка a
+    index_b = 0  # индеекс элементов списка b
+    res = []  # пустой список для, в котором будет конечный результат
     for _ in range(len(a) + len(b)):
-        if index_a + 1 > len(a):
-            res += [b[index_b]]
+        # сперва необходимо делать проверку на
+        # выход индекса за пределы индексации списка
+        if index_a + 1 > len(a):  # индексация элементов идет с нуля, но длина списка с единицы
+            res += [b[index_b:]]  # т.к. список a закончился, то нужно добавить остаток списка b
             break
-        elif index_b + 1 > len(b):
-            res += [a[index_a]]
+        elif index_b + 1 > len(b):  # тоже самое, только с b
+            res += [a[index_a:]]
             break
+        # далее простое сравнение элементов списков
         if a[index_a] < b[index_b]:
-            res += [a[index_a]]
-            index_a += 1
+            res += [a[index_a]]  # если больше b[i], то добавить к результату a[i]
+            index_a += 1  # после увеличиваем индекс а, т.к. элемент оттуда уже взят
         else:
-            res += [b[index_b]]
+            res += [b[index_b]]  # обратно, если a[i] больше
             index_b += 1
     return res
 
@@ -66,19 +72,20 @@ def sort_quick_fix(lst):
     '''
     исправленная функция
     '''
-    if len(lst) < 2: return lst
-    pivot = lst[len(lst) // 2]
-    left = []
-    right = [] 
-    middle = [lst[len(lst) // 2]]
-    for i in range(1, len(lst)):
-        if lst[i] < pivot: 
-            left += [lst[i]]
-        elif lst[i] > pivot: 
-            right += [lst[i]]
+    if len(lst) < 2: return lst  # если список из 1 или 0 элементов, то он уже отсортирован
+    pivot = lst[len(lst) // 2]  # берем элемент, относительно которого будем разбивать список
+    left = []  # список элементов меньше pivot
+    right = []  # список элементов больше pivot
+    middle = []  # список элементов, которые равны pivot
+    for i in range(len(lst)):  # цикл по длине списка
+        if lst[i] < pivot:  # если элемент меньше pivot
+            left += [lst[i]]  # то добавляем его в список меньших элементов
+        elif lst[i] > pivot:  # если элемент больше pivot
+            right += [lst[i]]  # то добавляем его в список меньших элементов
         else: 
-            middle += [lst[i]]
-    return sort_quick_fix(left) + middle + sort_quick_fix(right)
+            middle += [lst[i]]  # если элемент равен pivot, то добавляем в список равных элементов
+    return sort_quick_fix(left) + middle + sort_quick_fix(right)  # рекурсивный вызов для
+    # меньших элементов + равных(без рекурсии, т.к. сортировать нечего) + больших элементов()
 
 
 def sort_heap():
