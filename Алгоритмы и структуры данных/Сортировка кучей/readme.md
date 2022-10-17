@@ -10,4 +10,4 @@
 |2000000   |21,07      |17,343     |28,023     |  
 ---  
 
-![График](image.png "График")
+![image](https://user-images.githubusercontent.com/90271486/196220449-43937e80-184d-4b6a-80ad-b0d9744bafc0.png)
