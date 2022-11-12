@@ -90,8 +90,14 @@ namespace Классы
 
         public int this[int x, int y]  // Перегрузка индексирования матриц
         {
-            get => matrix[x, y];
-            set => matrix[x, y] = value;
+            get 
+            {
+                return matrix[x, y];
+            }
+            set 
+            {
+                matrix[x, y] = value;
+            }
         }
 
         public void ManualFilling()  // Заполнение матрицы пользователем
