@@ -5,7 +5,7 @@ namespace Классы
     class Matrix
     {
         Random r = new Random();
-        int[,] matrix;
+        double[,] matrix;
         int row, col;
 
         public int Row  // Свойтво row
@@ -50,7 +50,7 @@ namespace Классы
         {
             this.Row = 3;
             this.Col = 3;
-            matrix = new int[this.Row, this.Col];
+            matrix = new double[this.Row, this.Col];
             for (int i = 0; i < this.Row; i++)
             {
                 for (int j = 0; j < this.Col; j++)
@@ -64,7 +64,7 @@ namespace Классы
         {
             this.Row = x;
             this.Col = x;
-            matrix = new int[this.Row, this.Row];
+            matrix = new double[this.Row, this.Row];
             for (int i = 0; i < this.Col; i++)
             {
                 for (int j = 0; j < this.Row; j++)
@@ -78,7 +78,7 @@ namespace Классы
         {
             this.Row = x;
             this.Col = y;
-            matrix = new int[this.Row, this.Row];
+            matrix = new double[this.Row, this.Row];
             for (int i = 0; i < this.Col; i++)
             {
                 for (int j = 0; j < this.Row; j++)
@@ -88,7 +88,7 @@ namespace Классы
             }
         }
 
-        public int this[int x, int y]  // Перегрузка индексирования матриц
+        public double this[int x, int y]  // Перегрузка индексирования матриц
         {
             get 
             {
@@ -109,7 +109,7 @@ namespace Классы
                     try
                     {
                         Console.Write("Элемент [{0},{1}]: ", i, j);
-                        this[i, j] = Convert.ToInt32(Console.ReadLine());
+                        this[i, j] = Convert.ToDouble(Console.ReadLine());
                     }
                     catch
                     {
