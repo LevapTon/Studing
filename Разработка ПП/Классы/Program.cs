@@ -6,10 +6,25 @@ namespace Классы
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите число строк в отрезке [1;5]: ");
-            int x = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите число столбцов в отрезке [1;5]: ");
-            int y = Convert.ToInt32(Console.ReadLine());
+            int x, y;
+            try
+            {
+                Console.Write("Введите число строк в отрезке [1;5]: ");
+                x = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                x = 3;
+            }
+            try
+            {
+                Console.Write("Введите число столбцов в отрезке [1;5]: ");
+                y = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                y = 3;
+            }
 
             Matrix first = new();
             Matrix second = new Matrix();
