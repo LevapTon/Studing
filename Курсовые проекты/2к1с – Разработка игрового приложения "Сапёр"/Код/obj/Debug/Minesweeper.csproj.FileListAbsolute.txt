@@ -1,0 +1,14 @@
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe.config
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\bin\Debug\Minesweeper.pdb
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.AssemblyReference.cache
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Form1.resources
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Properties.Resources.resources
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.GenerateResource.cache
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CoreCompileInputs.cache
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Rools.resources
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.AboutApp.resources
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.DifficultySelection.resources
+C:\Users\pp111\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.LeaderTable.resources
