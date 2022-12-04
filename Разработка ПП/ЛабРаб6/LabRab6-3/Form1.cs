@@ -84,8 +84,7 @@ namespace LabRab6_3
             try
             {
             // за min и max принимаем первое значение температуры:
-                max = min =
-                Convert.ToDouble(textBox1.Lines[0].Substring(11));
+                max = min = Convert.ToDouble(textBox1.Lines[0].Substring(11));
                 for (i = 0; i < textBox1.Lines.Length; i++)
                 {
                     if (textBox1.Lines[i].Length > 0)
@@ -102,7 +101,7 @@ namespace LabRab6_3
                         }
                     }
                 }
-                textBox1.Text = "Максимальная температура: " + Convert.ToString(max) + ", наблюдалась " + m1 + "Минимальная температура: " + Convert.ToString(min) + ", наблюдалась " + m2;
+                textBox1.Text = "Максимальная температура: " + Convert.ToString(max) + Environment.NewLine + "наблюдалась " + m1 + Environment.NewLine + "Минимальная температура: " + Convert.ToString(min) + Environment.NewLine + "наблюдалась " + m2;
             } // try
             catch
             {
@@ -110,4 +109,6 @@ namespace LabRab6_3
             }
         }
     }
+}
+
 }
