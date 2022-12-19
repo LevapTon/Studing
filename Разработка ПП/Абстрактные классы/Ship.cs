@@ -4,35 +4,8 @@ namespace AbstractClasses
 {
     class Ship: Vehicle
     {
-        string comp = "Без компании",  // Производитель
-            home_port = "Без порта",  // Порт приписки
-            name = "Без названия";  // Наименование
-        int pas_num,  // Количество пассажиров
-            rel_year;  // Год выпуска
-        double cost;  // Стоимость
+        string home_port = "Без порта";
 
-        public override string Name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value; 
-            }
-        }
-        public override string Comp
-        {
-            get
-            {
-                return comp;
-            }
-            set
-            {
-                comp = value; 
-            }
-        }
         public string Home_port
         {
             get
@@ -42,42 +15,6 @@ namespace AbstractClasses
             set
             {
                 home_port = value; 
-            }
-        }
-        public override int Pas_num
-        {
-            get
-            {
-                return pas_num;
-            }
-            set
-            {
-                if (value >= 0) pas_num = value;
-                else pas_num = 0;
-            }
-        }
-        public override int Rel_year
-        {
-            get
-            {
-                return rel_year;
-            }
-            set
-            {
-                if (value >= 1858) rel_year = value;  // 1858 – год создания первого стального корабля
-                else rel_year = 1858;
-            }
-        }
-        public override double Cost
-        {
-            get
-            {
-                return cost;
-            }
-            set
-            {
-                if (value >= 0) cost = value;
-                else cost = 0;
             }
         }
 
@@ -90,20 +27,20 @@ namespace AbstractClasses
             this.Pas_num = 0;
             this.Cost = 0;
         }
-        public Ship(string x1, string x2, string x3, int x4, int x5, double x6)
+        public Ship(string comp, string name, string homePort, int rel_year, int pas_num, double cost)
         {
-            this.Comp = x1;
-            this.Name = x2;
-            this.Home_port = x3;
-            this.Rel_year = x4;
-            this.Pas_num = x5;
-            this.Cost = x6;
+            this.Comp = comp;
+            this.Name = name;
+            this.Home_port = homePort;
+            this.Rel_year = rel_year;
+            this.Pas_num = pas_num;
+            this.Cost = cost;
         }
 
         public override string PrintVehicle()
         {
-            string str1 = $"Корабль {Name}\nПроизводитель {Comp}, Порт приписки {Home_port}, ";
-            string str2 = $"Кол-во мест {Pas_num}, Год выпуска {Rel_year} г., Стоимость {Cost} руб.";
+            string str1 = $"Корабль {Name}\nПроизводитель {Comp, -30}Кол-во мест {Pas_num, -5}";
+            string str2 = $"Год выпуска {Rel_year, -6} г. Стоимость {Cost, -12} руб.  Порт приписки {Home_port}";
             return str1 + str2;
         }
     }
