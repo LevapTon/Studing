@@ -18,16 +18,52 @@ namespace AbstractClasses
                 new Car("GM Daewoo", "Chevrolet Lacetti", 2002, 5, 400000), 
                 new Car("КАМАЗ", "KAMAZ-5490", 2013, 3, 3500000),
                 new Car("Daimler AG", "Mercedes-Benz S-Class (C217)", 2015 , 2, 6950000),
-                new Car("Горьковский автомобильный завод", "ГАЗель NEXT A65R52-80", 1988 , 22, 4500000),
+                new Car("Горьковский автозавод", "ГАЗель NEXT A65R52-80", 1988 , 22, 4500000),
                 new Ship("ÖSWAG", "NAZCA", "Москва", 2020, 8, 275000000),
-                new Ship("арок", "кора", "", 2005, 100, 29447580000), 
-                new Ship("Boeing", "Boeing 787 Dreamliner", "", 2009, 250, 14952626000),
-                new Ship("Airbus", "Airbus A321", "", 1994 , 185, 5660680000),
-                new Ship("КБ Ильюшина", "Ил-96", "", 1988 , 435, 85000000000),
+                new Ship("M/Y MIA", "Monte Carlo Yachts", "Слима", 2017, 31, 338554000), 
+                new Ship("Azimut 43S", "Azimut", "Москва", 2014, 4, 35000000),
+                new Ship("Riva 88' Domino Super", "Riva", "Рим", 2016 , 20, 267100000),
+                new Ship("Bavaria R40 Coupe", "Bavaria", "", 2017 , 12, 23326060),
             };
 
-            Console.WriteLine("Список, отсортированный по году выпуска:");
-            vehicles.Sort((a, b) => a.Rel_year.CompareTo(b.Rel_year));
+            Hash hOne = new Hash();
+            vehicles.Sort();
+            for (int i = 0; i < vehicles.Count; i++)
+            {
+                hOne.AddElem(vehicles[i].Name, vehicles[i]);
+            }
+
+            foreach(Vehicle item in hOne)
+            {
+                Console.WriteLine(item.PrintVehicle());
+            }
+
+            
+            Hash hTwo = new Hash();
+            hTwo = (Hash)hOne.Clone();
+
+            //hOne.ClearHash();
+            Console.WriteLine();
+            hOne.RemoveElem("Chevrolet Lacetti");
+            hOne.RemoveElem("УАЗ-3163 «Patriot»");
+            hOne.RemoveElem("KAMAZ-5490");
+            hOne.RemoveElem("Mercedes-Benz S-Class (C217)");
+            hOne.RemoveElem("ГАЗель NEXT A65R52-80");
+
+            foreach(Vehicle item in hOne)
+            {
+                Console.WriteLine(item.PrintVehicle());
+            }
+
+            Console.WriteLine();
+
+            foreach(Vehicle item in hTwo)
+            {
+                Console.WriteLine(item.PrintVehicle());
+            }
+
+            /*Console.WriteLine("Список, отсортированный по году выпуска:");
+            vehicles.Sort(new SortByRelYear());
             for (int i = 0; i < vehicles.Count; i++)
             {
                 Console.WriteLine(vehicles[i].PrintVehicle());
@@ -42,11 +78,11 @@ namespace AbstractClasses
             Console.WriteLine();
             Console.Write("Введите необхоимое количество пассажиров: ");
             int capacity = Convert.ToInt32(Console.ReadLine());
-            vehicles.Sort((a, b) => a.Pas_num.CompareTo(b.Pas_num));
+            vehicles.Sort(new SortByPasNum());
             for (int i = 0; i < vehicles.Count; i++)
             {
                 if (vehicles[i].SearchByCapacity(capacity)) Console.WriteLine(vehicles[i].PrintVehicle());
-            }
+            }*/
         }
     }
     
