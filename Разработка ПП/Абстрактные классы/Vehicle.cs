@@ -4,26 +4,46 @@ namespace AbstractClasses
 {
     abstract class Vehicle: IComparable
     {
-        abstract public double Cost{get;set;}
-        abstract public int Rel_year{get;set;}
-        abstract public int Pas_num{get;set;}
-        abstract public string Name{get;set;}
-        abstract public string Comp{get;set;}
+        public double Cost{get;set;}
+        public int Rel_year{get;set;}
+        public int Pas_num{get;set;}
+        public string Name{get;set;}
+        public string Comp{get;set;}
 
         abstract public string PrintVehicle();
 
         public int CompareTo(object? o)
         {
-            if(o is Plane plane) return Cost.CompareTo(plane.Cost);
-            if(o is Car car) return Cost.CompareTo(car.Cost);
-            if(o is Ship ship) return Cost.CompareTo(ship.Cost);
-            else throw new ArgumentException("Некорректное значение параметра");
+            Vehicle temp = (Vehicle)o;
+            if (this.Cost > temp.Cost) return 1;
+            if (this.Cost < temp.Cost) return -1;
+            return 0;
         }
 
         public bool SearchByCapacity(int capacity)
         {
             if (this.Pas_num >= capacity) return true;
-            else return false;
+            return false;
+        }
+    }
+
+    class SortByRelYear: IComparer<Vehicle>
+    {
+        public int Compare(Vehicle? veh1, Vehicle? veh2)
+        {
+            if (veh1.Rel_year > veh2.Rel_year) return 1;
+            if (veh1.Rel_year < veh2.Rel_year) return -1;
+            return 0;
+        }
+    }
+
+    class SortByPasNum: IComparer<Vehicle>
+    {
+        public int Compare(Vehicle? veh1, Vehicle? veh2)
+        {
+            if (veh1.Pas_num > veh2.Pas_num) return 1;
+            if (veh1.Pas_num < veh2.Pas_num) return -1;
+            return 0;
         }
     }
 }
