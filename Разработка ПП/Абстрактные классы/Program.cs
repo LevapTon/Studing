@@ -43,7 +43,7 @@ namespace AbstractClasses
             hTwo = (Hash)hOne.Clone();
 
             //hOne.ClearHash();
-            Console.WriteLine();
+            Console.WriteLine("Измененная таблица");
             hOne.RemoveElem("Chevrolet Lacetti");
             hOne.RemoveElem("УАЗ-3163 «Patriot»");
             hOne.RemoveElem("KAMAZ-5490");
@@ -55,9 +55,27 @@ namespace AbstractClasses
                 Console.WriteLine(item.PrintVehicle());
             }
 
-            Console.WriteLine();
+            Console.WriteLine("Скопированная таблица");
 
             foreach(Vehicle item in hTwo)
+            {
+                Console.WriteLine(item.PrintVehicle());
+            }
+
+            Console.WriteLine("Удаление диапозона");
+
+            hTwo.RemoveRangeElems(hOne);
+
+            foreach(Vehicle item in hTwo)
+            {
+                Console.WriteLine(item.PrintVehicle());
+            }
+
+            Console.WriteLine("Добавление диапозона");
+
+            hOne.AddRangeElems(hTwo);
+
+            foreach(Vehicle item in hOne)
             {
                 Console.WriteLine(item.PrintVehicle());
             }
