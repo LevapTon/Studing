@@ -36,8 +36,13 @@ namespace AbstractClasses
 
         public Hash(Hash h)  // Создание коллекции, инициализируемой элементами другой коллекции
         {
-            this.keys = h.keys;
-            this.values = h.values;
+            this.keys = new ArrayList();
+            this.values = new List<Vehicle>();
+            for (int i = 0; i < h.CountElems; i++)
+            {
+                this.keys.Add(h.keys[i]);
+                this.values.Add(h.values[i]);
+            }
         }
 
         public void AddElem(object key, Vehicle t)  // Добавление элемента
