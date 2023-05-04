@@ -18,7 +18,7 @@ def get_info(html, start, href_b, href_e, data_b, data_e, text_b, text_e):
         point_one = html.find(href_b, point_one)
         point_two = html.find(href_e, point_one)
         ref_title = html[point_one + len(href_b):point_two].split('">')  # Ссылка с заголовком статьи
-        href, title = ref_title[0], ref_title[1]
+        href, title = 'https://pgsha.ru' + ref_title[0], ref_title[1]
 
         point_one = html.find(data_b, point_two)
         point_two = html.find(data_e, point_one)
