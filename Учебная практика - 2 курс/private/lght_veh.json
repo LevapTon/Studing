@@ -1,0 +1,67 @@
+[
+    {
+        "id": 0,
+        "name": "Changan UNI-K",
+        "relise": 2023,
+        "body": "SUV",
+        "trnsmsn": "Автоматическая",
+        "drive": "4WD",
+        "engine": "Бензин, 2000 куб.см, 232 л.с.",
+        "str_wheel": "Левый",
+        "rat": 4.4,
+        "pic": "images/lght_veh/changan_uni_k.jpg",
+        "href": "/changan_uni_k"
+    },
+    {
+        "id": 1,
+        "name": "Toyota Harrier",
+        "relise": 2020,
+        "body": "SUV",
+        "trnsmsn": "Вариаторная",
+        "drive": "Передний",
+        "engine": "Бензин, 2000 куб.см, 171 л.с.",
+        "str_wheel": "Правый",
+        "rat": "4.00",
+        "pic": "images/lght_veh/toyota_harrier.jpg",
+        "href": "/toyota_harrier"
+    },
+    {
+        "id": 2,
+        "name": "ГАЗ 3102 Волга",
+        "relise": 1998,
+        "body": "Седан",
+        "trnsmsn": "Механическая",
+        "drive": "Задний",
+        "engine": "Бензин, 2300 куб.см, 145 л.с.",
+        "str_wheel": "Левый",
+        "rat": "4.20",
+        "pic": "images/lght_veh/gaz_3102_volga.jpg",
+        "href": "/gaz_3102_volga"
+    },
+    {
+        "id": 3,
+        "name": "Лада Веста",
+        "relise": 2020,
+        "body": "Универсал",
+        "trnsmsn": "Вариаторная",
+        "drive": "Передний",
+        "engine": "Бензин, 1600 куб.см, 113 л.с.",
+        "str_wheel": "Левый",
+        "rat": 3.8,
+        "pic": "images/lght_veh/lada_vesta.jpg",
+        "href": "/lada_vesta"
+    },
+    {
+        "id": 4,
+        "name": "Nissan Note",
+        "relise": 2009,
+        "body": "Хэтчбек",
+        "trnsmsn": "Вариаторная",
+        "drive": "Передний",
+        "engine": "Бензин, 1500 куб.см, 109 л.с.",
+        "str_wheel": "Правый",
+        "rat": "4.40",
+        "pic": "images/lght_veh/nissan_note.jpg",
+        "href": "/nissan_note"
+    }
+]

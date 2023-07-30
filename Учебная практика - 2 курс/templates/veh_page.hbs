@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">Sunshine</div>
+
+            <nav class="nav">
+                <a class="nav__link" href="/">Главная</a>
+                <a class="nav__link" href="light_veh">Легковые</a>
+                <a class="nav__link" href="truck">Коммерческие</a>
+                <a class="nav__link" href="moto">Мото</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<body>
+
+<div class="main">
+    <div class="container">
+        <h1 class="main__title">Sunshine – Отзывы о транспорте</h1>
+    </div>
+</div>
+
+<div class="container__vhcls__pg">
+    <h1 class="veh__title">{{veh.name}}</h1><br>
+    <div class="cont__items">
+        <img class="veh__lst__images" src="{{veh.pic}}">
+        <div class="veh__info">
+            <p>Название: {{veh.name}}</p>
+            <p>Год выпуска: {{veh.relise}}</p>
+            <p>Корпус: {{veh.body}}</p>
+            <p>Трансмиссия: {{veh.trnsmsn}}</p>
+        </div>
+        <div class="veh__info">
+            <p>Привод: {{veh.drive}}</p>
+            <p>Двигатель: {{veh.engine}}</p>
+            <p>Руль: {{veh.str_wheel}}</p>
+            <p>Рейтинг: {{veh.rat}}</p>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="veh__title">Отзывы о транспорте</h2>
+        <div class="cont__feeds__to__veh">
+            <div class="btn__place">
+                <form  action="/feed" method="get"> <!-- вызов события /feed -->
+                    <button class="add__feed">Добавить отзыв</button>
+                </form>
+                <form action="/feed_del" method="get">
+                    <button class="del__btn" name="del_btn" value="{{fds.length}}">Удалить последний</button>
+                </form>
+            </div>
+            
+            <table>
+            <tr>
+                <th class="table__name">Имя</th>
+                <th>Отзыв</th>
+                <th class="table__rat">Рейтинг</th>
+                <th colspan="2">Действия</th>
+            </tr>
+            {{#each fds}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td class="table__feed">{{this.text}}</td>
+                <td>{{this.rat}}</td>
+                <td><form action="/feed_change" method="get">
+                        <button class="table__btn" name="change_btn" value="{{this.id}}">Изменить</button>
+                    </form></td>
+                <td><form action="/feed_del" method="get">
+                        <button class="table__btn" name="del_btn" value="{{this.id}}">Удалить</button>
+                    </form></td>
+            </tr>
+            {{/each}}
+        </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

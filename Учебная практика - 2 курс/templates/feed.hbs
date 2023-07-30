@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">Sunshine</div>
+
+            <nav class="nav">
+                <a class="nav__link" href="/">Главная</a>
+                <a class="nav__link" href="light_veh">Легковые</a>
+                <a class="nav__link" href="truck">Коммерческие</a>
+                <a class="nav__link" href="moto">Мото</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<body>
+
+<div class="main">
+    <div class="container">
+        <h1 class="main__title">Sunshine – Отзывы о транспорте</h1>
+    </div>
+</div>
+
+<div class="container__feed__page">
+    <div class="container__feed">
+        <form action="/feed" method="post"> <!-- вызов события /feed -->
+            <h1>Написать отзыв</h1>
+            <div class="container__feed__elem">
+                <p>Ваше имя</p>
+                <input class="feed__box" name="userName" type="name">
+            </div>
+            <div class="container__feed__elem">
+                <p>Ваш отзыв</p>
+                <textarea class="feed__box" name="userFeed" type="name"></textarea>
+            </div>
+            <div class="container__feed__elem">
+                <p>Ваша оценка</p>
+                <select class="feed__box" name="userRat">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <button class="btn__size">Добавить отзыв</button>
+            
+        </form>
+        {{!-- <input class="btn__size" type="submit" name="submit_btn" value="Добавить отзыв" onClick="history.go(-1)"> --}}
+        <input class="btn__size" type="button" name="cancel_btn" value="Назад" onClick="history.go(-1)">
+    </div>
+
+    <div class="container__feed__desc">
+        <h1 class="ctnr__feed__desc__align">Ваше мнение важно!</h1><br>
+        <h2>Пожалуйста, опишите Ваше впечатлении о данном транспортном средстве!</h2>
+        <h2>Какие достоинства Вы можете выделить?</h2>
+        <h2>Какие ключевые недостатки, по Вашему мнению, есть у этого Т/С?</h2>
+        <h2>Помните, что Ваш развернутый отзыв поможет составить
+            более объективную картину о транспорте!</h2><br>
+        <h1 class="ctnr__feed__desc__align">Спасибо, что уделяете на это время!</h1>
+    </div>    
+</div>
+
+</body>
+</html>

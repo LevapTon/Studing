@@ -1,0 +1,67 @@
+[
+    {
+        "id": 0,
+        "name": "Mitsubishi Fuso",
+        "relise": 1992,
+        "body": "Грузовик",
+        "trnsmsn": "Механическая",
+        "drive": "Задний",
+        "engine": "Дизель, 7500 куб.см, 185 л.с.",
+        "str_wheel": "Правый",
+        "rat": "3.80",
+        "pic": "images/truck_veh/mitsubishi_fuso_crane.jpg",
+        "href": "/mitsubishi_fuso"
+    },
+    {
+        "id": 1,
+        "name": "ЗИЛ 133",
+        "relise": 1992,
+        "body": "Грузовик",
+        "trnsmsn": "Механическая",
+        "drive": "Задний",
+        "engine": "Дизель, 10900 куб.см, 210 л.с.",
+        "str_wheel": "Левый",
+        "rat": "3.80",
+        "pic": "images/truck_veh/zil_133.jpg",
+        "href": "/zil_133"
+    },
+    {
+        "id": 2,
+        "name": "BAW Tonik",
+        "relise": 2012,
+        "body": "Грузовик",
+        "trnsmsn": "Механическая",
+        "drive": "Задний",
+        "engine": "Бензин, 1300 куб.см, 70 л.с.",
+        "str_wheel": "Левый",
+        "rat": "3.80",
+        "pic": "images/truck_veh/baw_tonik.jpg",
+        "href": "/baw_tonik"
+    },
+    {
+        "id": 3,
+        "name": "Isuzu Elf",
+        "relise": 2013,
+        "body": "Грузовик",
+        "trnsmsn": "Механическая",
+        "drive": "4WD",
+        "engine": "Дизель, 3000 куб.см, 150 л.с.",
+        "str_wheel": "Правый",
+        "rat": "3.80",
+        "pic": "images/truck_veh/isuzu_elf.jpg",
+        "href": "/isuzu_elf"
+    },
+    {
+        "id": 4,
+        "name": "Nissan Atlas",
+        "relise": 1993,
+        "body": "Грузовик",
+        "trnsmsn": "Механическая",
+        "drive": "Задний",
+        "engine": "Дизель, 2700 куб.см, 27 л.с.",
+        "str_wheel": "Правый",
+        "rat": "4.00",
+        "pic": "images/truck_veh/nissan_atlas.jpg",
+        "href": "/nissan_atlas"
+    }
+]

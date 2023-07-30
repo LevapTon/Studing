@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">Sunshine</div>
+
+            <nav class="nav">
+                <a class="nav__link" href="/">Главная</a>
+                <a class="nav__link" href="light_veh">Легковые</a>
+                <a class="nav__link" href="truck">Коммерческие</a>
+                <a class="nav__link" href="moto">Мото</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<body>
+
+<div class="main">
+    <div class="container">
+        <h1 class="main__title">Sunshine – Отзывы о транспорте</h1>
+    </div>
+</div>
+
+<div class="container__feed__page">
+    <div class="container__feed">
+        <form action="/feed_del" method="post"> <!-- вызов события /feed -->
+            <h1>Вы уверены, что хотите удалить выбранный отзыв?</h1>
+            <div class="container__feed__elem">
+                <p>Ваше имя</p>
+                <input class="feed__box" name="userName" type="name" value="{{fds.name}}">
+            </div>
+            <div class="container__feed__elem">
+                <p>Ваш отзыв</p>
+                <textarea class="feed__box" name="userFeed" type="name">{{fds.text}}</textarea>
+            </div>
+            <div class="container__feed__elem">
+                <p>Ваша оценка</p>
+                <select class="feed__box" name="userRat">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <button class="btn__size">Да</button>
+        </form>
+        <input class="btn__size" type="button" name="cancel_btn" value="Нет" onClick="history.go(-1)">
+    </div>  
+</div>
+
+</body>
+</html>

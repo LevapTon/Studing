@@ -1,0 +1,67 @@
+[
+    {
+        "id": 0,
+        "name": "BMW R1200RT",
+        "relise": 2014,
+        "spn_moment": "125 Нм",
+        "trnsmsn": "Механическая",
+        "mass": "276 кг",
+        "engine": "Бензин, 1170 куб.см, 125 л.с.",
+        "fuel_tank": "25 л",
+        "rat": 4,
+        "pic": "images/moto/bmw_r1200rt.jpg",
+        "href": "/bmw_r1200rt"
+    },
+    {
+        "id": 1,
+        "name": "KTM 1290 Super Duke R",
+        "relise": 2020,
+        "spn_moment": "140 Нм",
+        "trnsmsn": "Механическая",
+        "mass": "189 кг",
+        "engine": "Бензин, 1301 куб.см, 177 л.с.",
+        "fuel_tank": "16 л",
+        "rat": 4,
+        "pic": "images/moto/ktm_1290_super_duke_r.jpg",
+        "href": "/ktm_1290_super_duke_r"
+    },
+    {
+        "id": 2,
+        "name": "Honda CB1000R",
+        "relise": 2008,
+        "spn_moment": "104 Нм",
+        "trnsmsn": "Механическая",
+        "mass": "217 кг",
+        "engine": "Бензин, 998 куб.см, 145 л.с.",
+        "fuel_tank": "16 л",
+        "rat": 4.6,
+        "pic": "images/moto/honda_cb1000r.jpg",
+        "href": "/honda_cb1000r"
+    },
+    {
+        "id": 3,
+        "name": "Yamaha XV 1700 Warrior",
+        "relise": 2010,
+        "spn_moment": "135 Нм",
+        "trnsmsn": "Механическая",
+        "mass": "295 кг",
+        "engine": "Бензин, 1670 куб.см, 85 л.с.",
+        "fuel_tank": "15 л",
+        "rat": 4.6,
+        "pic": "images/moto/yamaha_xv_1700_warrior.jpg",
+        "href": "/yamaha_xv_1700_warrior"
+    },
+    {
+        "id": 4,
+        "name": "Honda GL1800",
+        "relise": 2014,
+        "spn_moment": "170 Нм",
+        "trnsmsn": "Механическая",
+        "mass": "369 кг",
+        "engine": "Бензин, 1833 куб.см, 126 л.с.",
+        "fuel_tank": "21 л",
+        "rat": 4.6,
+        "pic": "images/moto/honda_gl1800.jpg",
+        "href": "/honda_gl1800"
+    }
+]
